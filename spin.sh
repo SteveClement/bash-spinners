@@ -1,15 +1,17 @@
 #!/bin/bash
 
+setterm -cursor off
+
 for c in $(./generateFrom.sh); do spin="$spin $c"; done
 
 for s in $spin; do
   if [[ "$s" == "next" ]]; then
     echo -n " Next spinner"
-    echo
+    printf "\n\n"
   else
     s=$(echo $s |tr -d '""')
     printf "\r${s}"
-    sleep .1
+    sleep .2
   fi
 done
 
