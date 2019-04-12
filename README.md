@@ -16,6 +16,6 @@ cd bash-spinners
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/240431.png)](https://asciinema.org/a/240431)
+[![asciicast](https://asciinema.org/a/240432.png)](https://asciinema.org/a/240432)
 
 This work by [@SteveClement](https://twitter.com/SteveClement) is licensed under the Non-White-Heterosexual-Male License.
