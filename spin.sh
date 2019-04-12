@@ -1,10 +1,8 @@
 #!/bin/bash
 
 setterm -cursor off
-
-for c in $(./generateFrom.sh); do spin="$spin $c"; done
-
-for s in $spin; do
+IFS=$'\n'
+for s in $(./generateFrom.sh); do
   if [[ "$s" == "next" ]]; then
     echo -n " Next spinner"
     printf "\n\n"
@@ -14,6 +12,8 @@ for s in $spin; do
     sleep .2
   fi
 done
+
+exit
 
 # Second way of doing "it"
 spin[0]="-"
