@@ -7,5 +7,6 @@ fi
 spinners=$(cat spinners.json|jq 'keys' |tr ',' ' ' |grep -v '\[' |grep -v '\]' |xargs)
 
 for s in $spinners; do
-  cat spinners.json|jq .${s}.frames | tr -d '\n' |tr -d ' ' |tr -d '\['  |tr -d '\]' |tr -d ',' |tr -d '"'
+  cat spinners.json|jq .${s}.frames | tr -d ' ' |tr -d '\['  |tr -d '\]' |tr ',' ' '
+  echo -n "next"
 done
